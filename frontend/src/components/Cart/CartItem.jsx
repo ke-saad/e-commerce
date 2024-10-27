@@ -24,7 +24,7 @@ const CartItem = ({ product, name, seller, price, cuttedPrice, image, stock, qua
         if (quantity <= 1) return;
         dispatch(addItemsToCart(id, newQty));
     }
-    
+
     const removeCartItem = (id) => {
         dispatch(removeItemsFromCart(id));
         enqueueSnackbar("Product Removed From Cart", { variant: "success" });
@@ -56,7 +56,7 @@ const CartItem = ({ product, name, seller, price, cuttedPrice, image, stock, qua
                         </div>
 
                         <div className="flex flex-col sm:gap-2">
-                            <p className="text-sm">Delivery by {getDeliveryDate()} | <span className="text-primary-green">Free</span> <span className="line-through">₹{quantity * 40}</span></p>
+                            <p className="text-sm">Delivery by {getDeliveryDate()} | <span className="text-primary-green">Free</span> <span className="line-through">MAD {quantity * 40}</span></p>
                             <span className="text-xs text-gray-500">7 Days Replacement Policy</span>
                         </div>
 
@@ -65,8 +65,8 @@ const CartItem = ({ product, name, seller, price, cuttedPrice, image, stock, qua
 
                     {/* <!-- price desc --> */}
                     <div className="flex items-baseline gap-2 text-xl font-medium">
-                        <span>₹{(price * quantity).toLocaleString()}</span>
-                        <span className="text-sm text-gray-500 line-through font-normal">₹{(cuttedPrice * quantity).toLocaleString()}</span>
+                        <span>MAD {(price * quantity).toLocaleString()}</span>
+                        <span className="text-sm text-gray-500 line-through font-normal">MAD {(cuttedPrice * quantity).toLocaleString()}</span>
                         <span className="text-sm text-primary-green">{getDiscount(price, cuttedPrice)}%&nbsp;off</span>
                     </div>
                     {/* <!-- price desc --> */}
@@ -86,8 +86,8 @@ const CartItem = ({ product, name, seller, price, cuttedPrice, image, stock, qua
                 {/* <!-- quantity --> */}
                 {inCart && (
                     <>
-                    <button onClick={() => saveForLaterHandler(product)} className="sm:ml-4 font-medium hover:text-primary-blue">SAVE FOR LATER</button>
-                    <button onClick={() => removeCartItem(product)} className="font-medium hover:text-red-600">REMOVE</button>
+                        <button onClick={() => saveForLaterHandler(product)} className="sm:ml-4 font-medium hover:text-primary-blue">SAVE FOR LATER</button>
+                        <button onClick={() => removeCartItem(product)} className="font-medium hover:text-red-600">REMOVE</button>
                     </>
                 )}
             </div>

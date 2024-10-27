@@ -10,7 +10,7 @@ const Wishlist = () => {
 
     return (
         <>
-            <MetaData title="Wishlist | Flipkart" />
+            <MetaData title="Wishlist | Shop4ever" />
 
             <MinCategory />
             <main className="w-full mt-12 sm:mt-0">
@@ -33,7 +33,7 @@ const Wishlist = () => {
                             )}
 
                             {wishlistItems.map((item, index) => (
-                                <Product {...item} key={index}/>
+                                <Product {...item} key={index} />
                             )
                             ).reverse()}
 

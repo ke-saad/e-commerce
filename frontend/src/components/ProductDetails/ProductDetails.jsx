@@ -188,8 +188,8 @@ const ProductDetails = () => {
                                     {/* <!-- price desc --> */}
                                     <span className="text-primary-green text-sm font-medium">Special Price</span>
                                     <div className="flex items-baseline gap-2 text-3xl font-medium">
-                                        <span className="text-gray-800">₹{product.price?.toLocaleString()}</span>
-                                        <span className="text-base text-gray-500 line-through">₹{product.cuttedPrice?.toLocaleString()}</span>
+                                        <span className="text-gray-800">MAD {product.price?.toLocaleString()}</span>
+                                        <span className="text-base text-gray-500 line-through">MAD {product.cuttedPrice?.toLocaleString()}</span>
                                         <span className="text-base text-primary-green">{getDiscount(product.price, product.cuttedPrice)}%&nbsp;off</span>
                                     </div>
                                     {product.stock <= 10 && product.stock > 0 && (
@@ -202,7 +202,7 @@ const ProductDetails = () => {
                                     {Array(3).fill("").map((el, i) => (
                                         <p className="text-sm flex items-center gap-1" key={i}>
                                             <span className="text-primary-lightGreen"><LocalOfferIcon sx={{ fontSize: "20px" }} /></span>
-                                            <span className="font-medium ml-2">Bank Offer</span> 15% Instant discount on first Flipkart Pay Later order of 500 and above <Link className="text-primary-blue font-medium" to="/">T&C</Link>
+                                            <span className="font-medium ml-2">Bank Offer</span> 15% Instant discount on first Shop4ever Pay Later order of 500 and above <Link className="text-primary-blue font-medium" to="/">T&C</Link>
                                         </p>
                                     ))}
                                     {/* <!-- banks offers --> */}
@@ -263,11 +263,11 @@ const ProductDetails = () => {
                                     </div>
                                     {/* <!-- seller details --> */}
 
-                                    {/* <!-- flipkart plus banner --> */}
+                                    {/* <!-- Shop4ever banner --> */}
                                     <div className="sm:w-1/2 mt-4 border">
                                         <img draggable="false" className="w-full h-full object-contain" src="https://rukminim1.flixcart.com/lockin/763/305/images/promotion_banner_v2_active.png" alt="" />
                                     </div>
-                                    {/* <!-- flipkart plus banner --> */}
+                                    {/* <!-- Shop4ever banner --> */}
 
                                     {/* <!-- description details --> */}
                                     <div className="flex flex-col sm:flex-row gap-1 sm:gap-14 mt-4 items-stretch text-sm">
@@ -362,7 +362,7 @@ const ProductDetails = () => {
                                             )).reverse()
                                         }
                                         {product.reviews?.length > 3 &&
-                                            <button onClick={() => setViewAll(!viewAll)} className="w-1/3 m-2 rounded-sm shadow hover:shadow-lg py-2 bg-primary-blue text-white">{viewAll ? "View Less" : "View All"}</button>
+                                            <button onClick={() => setViewAll(!viewAll)} className="w-1/3 m-2 rounded-sm shadow hover:shadow-lg py-2 bg-primary-green text-white">{viewAll ? "View Less" : "View All"}</button>
                                         }
                                     </div>
                                     {/* <!-- reviews border box --> */}

@@ -130,7 +130,7 @@ const Payment = () => {
 
     return (
         <>
-            <MetaData title="Flipkart: Secure Payment | Paytm" />
+            <MetaData title="Shop4ever: Secure Payment | Paytm" />
 
             <main className="w-full mt-20">
 
@@ -163,7 +163,7 @@ const Payment = () => {
                                         </RadioGroup>
                                     </FormControl>
 
-                                    <input type="submit" value={`Pay ₹${totalPrice.toLocaleString()}`} disabled={payDisable ? true : false} className={`${payDisable ? "bg-primary-grey cursor-not-allowed" : "bg-primary-orange cursor-pointer"} w-1/2 sm:w-1/4 my-2 py-3 font-medium text-white shadow hover:shadow-lg rounded-sm uppercase outline-none`} />
+                                    <input type="submit" value={`Pay MAD ${totalPrice.toLocaleString()}`} disabled={payDisable ? true : false} className={`${payDisable ? "bg-primary-grey cursor-not-allowed" : "bg-primary-orange cursor-pointer"} w-1/2 sm:w-1/4 my-2 py-3 font-medium text-white shadow hover:shadow-lg rounded-sm uppercase outline-none`} />
 
                                 </form>
 

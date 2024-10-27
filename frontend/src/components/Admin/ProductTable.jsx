@@ -99,7 +99,7 @@ const ProductTable = () => {
             flex: 0.2,
             renderCell: (params) => {
                 return (
-                    <span>₹{params.row.price.toLocaleString()}</span>
+                    <span>MAD {params.row.price.toLocaleString()}</span>
                 );
             },
         },
@@ -113,7 +113,7 @@ const ProductTable = () => {
             flex: 0.2,
             renderCell: (params) => {
                 return (
-                    <span>₹{params.row.cprice.toLocaleString()}</span>
+                    <span>MAD {params.row.cprice.toLocaleString()}</span>
                 );
             },
         },
@@ -161,13 +161,13 @@ const ProductTable = () => {
 
     return (
         <>
-            <MetaData title="Admin Products | Flipkart" />
+            <MetaData title="Admin Products | Shop4ever" />
 
             {loading && <BackdropLoader />}
 
             <div className="flex justify-between items-center">
                 <h1 className="text-lg font-medium uppercase">products</h1>
-                <Link to="/admin/new_product" className="py-2 px-4 rounded shadow font-medium text-white bg-primary-blue hover:shadow-lg">New Product</Link>
+                <Link to="/admin/new_product" className="py-2 px-4 rounded shadow font-medium text-white bg-primary-green hover:shadow-lg">New Product</Link>
             </div>
             <div className="bg-white rounded-xl shadow-lg w-full" style={{ height: 470 }}>
 

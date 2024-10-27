@@ -61,7 +61,7 @@ const Products = () => {
 
     return (
         <>
-            <MetaData title="All Products | Flipkart" />
+            <MetaData title="All Products | Shop4ever" />
 
             <MinCategory />
             <main className="w-full mt-14 sm:mt-0">
@@ -97,9 +97,9 @@ const Products = () => {
                                     />
 
                                     <div className="flex gap-3 items-center justify-between mb-2 min-w-full">
-                                        <span className="flex-1 border px-4 py-1 rounded-sm text-gray-800 bg-gray-50">₹{price[0].toLocaleString()}</span>
+                                        <span className="flex-1 border px-4 py-1 rounded-sm text-gray-800 bg-gray-50">MAD {price[0].toLocaleString()}</span>
                                         <span className="font-medium text-gray-400">to</span>
-                                        <span className="flex-1 border px-4 py-1 rounded-sm text-gray-800 bg-gray-50">₹{price[1].toLocaleString()}</span>
+                                        <span className="flex-1 border px-4 py-1 rounded-sm text-gray-800 bg-gray-50">MAD {price[1].toLocaleString()}</span>
                                     </div>
                                 </div>
                                 {/* price slider filter */}
@@ -190,8 +190,8 @@ const Products = () => {
 
                                 <div className="grid grid-cols-1 sm:grid-cols-4 w-full place-content-start overflow-hidden pb-4 border-b">
                                     {products?.map((product) => (
-                                            <Product {...product} key={product._id} />
-                                        ))
+                                        <Product {...product} key={product._id} />
+                                    ))
                                     }
                                 </div>
                                 {filteredProductsCount > resultPerPage && (
