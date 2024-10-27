@@ -21,9 +21,6 @@ Full-Stack Shop4ever E-commerce Platform with Admin Dashboard & Paytm Payment Ga
 ### Payment Gateway:
 - Paytm
 
-### Deployed On:
-- Heroku
-
 ### Additional Services:
 - Image Management: Cloudinary
 - Mail Service: Sendgrid
